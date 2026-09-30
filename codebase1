@@ -1,1 +1,37 @@
+def login():
+    usern=input("enter the name :")
+    userpas=input(" enter your passward:")
+    for i in information:
+        if i["username"]==usern and i['passward']==userpas:
+            print("login successful")
+            break
+    else:
+        print("re enter your paxsward ")
+    
+def info():
+     y=input("are you sure you want to access your information y/n::")
+     if y=='y':
+         name= input("\nenter your username:")
+         for i in information:
+             if i["username"]==name:      
+                print("\n\tyour information is",i)
+                break
+             else:  
+                print("enter a correct username")
+     else:
+        print("thanks for visiting us")
 
+                      
+while True:
+    print("\n")
+    entry=int(input("enter your choice  :"))
+    if entry==1:
+          reg()
+    elif entry==2:
+          login()
+
+    elif entry==3:
+          info()
+    else:
+          print("please enter correct number")
+          
